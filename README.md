@@ -1,7 +1,6 @@
 # Inflammatory spondyloarthropathies
 Scripts and pipelines to analyze DEGs in inflammatory spondyloarthropathies.
 
-# MASTER'S DEGREE
 # Common pathways and molecular signatures in ankylosing spondylitis and psoriatic arthritis: a systems biology perspective.
 ## Abstract
 <div align="justify">
