@@ -1,6 +1,9 @@
 # Inflammatory spondyloarthropathies
 Scripts and pipelines to analyze DEGs in inflammatory spondyloarthropathies.
 
+Publicated at the preprint in 27/08/2025 with the title: Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics.
+https://www.biorxiv.org/content/10.1101/2025.08.20.671331v1
+
 # Common pathways and molecular signatures in ankylosing spondylitis and psoriatic arthritis: a systems biology perspective.
 ## Abstract
 <div align="justify">
