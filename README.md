@@ -39,10 +39,12 @@ Spondyloarthropathies (SpA), such as AS and PsA, present significant clinical an
 └── README.md              # Project documentation
 ```
 
-🚀 Getting Started & Requirements
+🚀 ## Getting Started & Requirements
+
 The pipelines in this repository were developed using the R statistical computing environment.
 
-Prerequisites
+## Prerequisites
+
 To replicate the analyses, make sure you have R (v4.0 or higher) installed along with the following mandatory packages:
 
 R
@@ -62,20 +64,24 @@ cd spondyloarthropathies
 ```
 Execute the script workflows sequentially inside your R console or RStudio environment to reproduce the statistical outputs and network configurations.
 
-🤝 Institutional Support
+🤝 ## Institutional Support
+
 This work was conducted at the Evolutionary Molecular Biology Laboratory (EvoMol-Lab) with computational infrastructure and technical support provided by:
 
 BioME (Bioinformatics Multidisciplinary Environment) - IMD/UFRN
 
 NPAD (High-Performance Computing Center) - UFRN
 
-💰 Funding
+💰 ## Funding
+
 This study was financed in part by the Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil (CAPES) - Finance Code 001.
 
-📜 License
+📜 ## License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-📚 References
+📚 ## References
+
 - Almende, et al. (2024). visNetwork: Network Visualization using 'vis.js' Library. R package version 2.1.3.
 - Carlson, M. (2024). org.Hs.eg.db: Genome wide annotation for Human. R package version 3.19.0.
 - Carlson, M. (2024). TxDb.Hsapiens.UCSC.hg38.knownGene: Annotation package for TxDb object(s). R package version 3.20.0.
