@@ -55,13 +55,7 @@ install.packages(c("tidyverse", "BiocManager", "ggplots", "igraph", "visNetwork"
 # Bioconductor Packages
 BiocManager::install(c("DESeq2", "clusterProfiler", "org.Hs.eg.db", "AnnotationDbi"))
 ```
-```
-Running the Analysis
-Clone this repository to your local cluster or machine:
-Bash
-git clone [https://github.com/evomol-lab/spondyloarthropathies.git](https://github.com/evomol-lab/spondyloarthropathies.git)
-cd spondyloarthropathies
-```
+
 Execute the script workflows sequentially inside your R console or RStudio environment to reproduce the statistical outputs and network configurations.
 
 ## 🤝 Institutional Support
