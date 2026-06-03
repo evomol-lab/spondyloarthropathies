@@ -53,7 +53,7 @@ R
 install.packages(c("tidyverse", "BiocManager", "ggplots", "igraph", "visNetwork", "pheatmap"))
 
 # Bioconductor Packages
-BiocManager::install(c("DESeq2", "clusterProfiler", "org.Hs.eg.db", "AnnotationDbi"))
+BiocManager::install(c("DESeq2", "GEOquery", "clusterProfiler", "org.Hs.eg.db", "AnnotationDbi"))
 ```
 
 Execute the script workflows sequentially inside your R console or RStudio environment to reproduce the statistical outputs and network configurations.
