@@ -3,7 +3,7 @@ Scripts and pipelines to analyze DEGs in inflammatory spondyloarthropathies.
 
 # Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics
 
-# Integrated transcriptomics of psoriatic arthritis and ankylosing spondylitis
+## Integrated transcriptomics of psoriatic arthritis and ankylosing spondylitis
 
 [![R](https://img.shields.io/badge/R-4.4.1-276DC3?logo=r&logoColor=white)](https://www.r-project.org/)
 [![Bioconductor](https://img.shields.io/badge/Bioconductor-3.19-87B13F)](https://bioconductor.org/)
@@ -265,4 +265,7 @@ The source code is distributed under the [MIT License](LICENSE). The original GE
 datasets remain subject to the terms specified by their respective depositors and
 repositories.
 
+
+---
+*For questions, feedback, or collaborations, feel free to open an issue or contact me via [lais.goncalves.034@ufrn.edu.br].*
 
