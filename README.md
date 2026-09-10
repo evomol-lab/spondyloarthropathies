@@ -9,8 +9,8 @@ This repository contains the source code, scripts, and analytical pipelines used
 
 If you use this code, the data pipelines, or findings in your research, please cite our work:
 
-* **Preprint:** Gonçalves, L. C., Rodrigues-Neto, J. F., Gupta, S., de Souza, G. A., & Lima, J. P. M. S. (2026). Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics. *bioRxiv*. (https://www.biorxiv.org/content/10.1101/2025.08.20.671331v1)
-* **Peer-Reviewed Article:** Gonçalves, L. C., Rodrigues-Neto, J. F., Gupta, S., de Souza, G. A., & Lima, J. P. M. S. (2026). Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics. ***Genes & Diseases*** (In Press).
+* **Preprint:** Gonçalves, L. C., Rodrigues-Neto, J. F., Gupta, S., de Souza, G. A., & Lima, J. P. M. S. (2025). Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics. *bioRxiv*. (https://www.biorxiv.org/content/10.1101/2025.08.20.671331v1)
+* **Peer-Reviewed Article:** Gonçalves, L. C., Rodrigues-Neto, J. F., Gupta, S., de Souza, G. A., & Lima, J. P. M. S. (2026). Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics. ***Computational and Structural Biotechnology Journal*** (In Press).
 
 ---
 
