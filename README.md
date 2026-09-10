@@ -3,76 +3,234 @@ Scripts and pipelines to analyze DEGs in inflammatory spondyloarthropathies.
 
 # Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics
 
-This repository contains the source code, scripts, and analytical pipelines used to perform an integrative transcriptomic and systems biology analysis to differentiate the molecular mechanisms underlying **Ankylosing Spondylitis (AS)** and **Psoriatic Arthritis (PsA)**.
+# Integrated transcriptomics of psoriatic arthritis and ankylosing spondylitis
 
-## 📄 Citation & Publications
+[![R](https://img.shields.io/badge/R-4.4.1-276DC3?logo=r&logoColor=white)](https://www.r-project.org/)
+[![Bioconductor](https://img.shields.io/badge/Bioconductor-3.19-87B13F)](https://bioconductor.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![bioRxiv](https://img.shields.io/badge/bioRxiv-10.1101%2F2025.08.20.671331-B31B1B)](https://doi.org/10.1101/2025.08.20.671331)
 
-If you use this code, the data pipelines, or findings in your research, please cite our work:
+Research compendium for the study:
 
-* **Preprint:** Gonçalves, L. C., Rodrigues-Neto, J. F., Gupta, S., de Souza, G. A., & Lima, J. P. M. S. (2025). Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics. *bioRxiv*. (https://www.biorxiv.org/content/10.1101/2025.08.20.671331v1)
-* **Peer-Reviewed Article:** Gonçalves, L. C., Rodrigues-Neto, J. F., Gupta, S., de Souza, G. A., & Lima, J. P. M. S. (2026). Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics. ***Computational and Structural Biotechnology Journal*** (In Press).
+> **Beyond the Shared Inflammatory Axis: Differentiating Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through Integrated Omics**
 
----
+This repository contains the R analysis scripts, rendered reports, supplementary
+tables, and result figures used to compare **psoriatic arthritis (PsA)** and
+**ankylosing spondylitis (AS)** across skin and peripheral-blood transcriptomes.
+The study combines literature-guided gene curation, differential expression,
+functional enrichment, protein–protein interaction networks, and transcriptional
+regulatory analysis.
 
-## 🔬 Project Overview
+## Study question
 
-Spondyloarthropathies (SpA), such as AS and PsA, present significant clinical and immunological overlaps, frequently confounding precise molecular differentiation. This study leverages a multi-dataset, integrated transcriptomic approach combined with scientific text mining, network biology, and transcription factor regulon modeling to uncover specific hub genes and distinct regulatory circuits unique to each pathology.
+PsA and AS share inflammatory pathways and clinical features, but their tissue-
+specific regulatory programs remain incompletely resolved. We therefore asked:
 
-### Key Workflows Implemented:
-1.  **Data Retrieval & Curation:** Integration of public RNA-Seq datasets from NCBI Gene Expression Omnibus (GEO): `GSE186063`, `GSE117769`, `GSE205748`, and `GSE221786`.
-2.  **Scientific Text Mining & Biological Filtering:** Curation of a refined list of 433 candidate disease-associated genes.
-3.  **Differential Gene Expression Analysis (DEG):** Benchmarking transcriptome profiles across patient cohorts.
-4.  **Protein-Protein Interaction (PPI) Networks:** Reconstruction of topological functional modules and identification of regulatory hub proteins.
-5.  **Transcription Factor (TF) Regulon Modeling:** System-level evaluation of master regulators driving distinct transcriptional signatures.
+> Which molecular signals are shared by PsA and AS, and which expression and
+> regulatory features distinguish the diseases across skin and blood?
 
----
+## Study design
 
-## 🛠️ Repository Structure
+```mermaid
+flowchart LR
+    A["Literature curation<br/>150 articles"] --> B["3,660 disease-associated genes"]
+    B --> C["433 genes shared by PsA and AS"]
+    D["Four GEO RNA-seq datasets<br/>skin and blood"] --> E["Differential expression"]
+    C --> E
+    E --> F["GO, KEGG, Reactome<br/>and STRING networks"]
+    F --> G["Hubs and candidate<br/>regulatory factors"]
+```
+
+All differential-expression results reported in the study were evaluated using
+an adjusted *P* value below 0.05 and an absolute log2 fold change of at least 1,
+unless otherwise stated.
+
+## Data sources and comparisons
+
+All transcriptomic datasets are publicly available from the NCBI Gene Expression
+Omnibus (GEO). No controlled-access patient-level data are stored in this
+repository.
+
+| GEO accession | Biological material | Groups and principal comparisons | Script | Rendered analysis |
+|---|---|---|---|---|
+| [GSE117769](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117769) | Peripheral blood | PsA, AS, and healthy controls | [R script](Codes%20in%20R/GSE117769_codigo.R) | [HTML report](html/Analysis-of-DataSet-GSE117769.html) |
+| [GSE186063](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE186063) | Skin | Non-lesional PsA, lesional PsA, and AS skin | [R script](Codes%20in%20R/GSE186063_codigo.R) | [HTML report](html/Analysis%20of%20DataSet%20GSE186063.html) |
+| [GSE205748](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205748) | Skin | Non-lesional PsA, lesional PsA, and controls | [R script](Codes%20in%20R/GSE205748_codigo.R) | [HTML report](html/Analysis-of-DataSet-GSE205748.html) |
+| [GSE221786](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221786) | Peripheral blood mononuclear cells | AS and healthy controls | [R script](Codes%20in%20R/GSE221786_codigo.R) | [HTML report](html/Analysis-of-DataSet-GSE221786.html) |
+
+## Analysis modules
+
+1. **Literature-guided curation** — genes associated with PsA and AS were
+   collected from publications indexed from 2014–2024 and expanded with public
+   disease-knowledge resources.
+2. **Differential expression** — RNA-seq counts were processed with DESeq2;
+   dataset-specific contrasts were assessed using Wald tests after model fitting.
+3. **Functional interpretation** — Gene Ontology, KEGG, and Reactome analyses
+   were performed with Bioconductor enrichment tools.
+4. **Protein interaction analysis** — STRING interactions were used to assemble
+   protein–protein interaction networks and evaluate network centrality.
+5. **Regulatory analysis** — GENIE3, JASPAR 2020, and TFBS-related resources were
+   used to examine transcription factor–target relationships and prioritize
+   candidate regulators.
+
+## Main findings reported in the manuscript
+
+- The literature-guided search yielded **3,660 disease-associated genes**, of
+  which **433 were shared** between PsA and AS.
+- **No differentially expressed genes were detected between non-lesional PsA
+  skin and AS skin** within the curated gene set under the applied thresholds.
+  This result indicates an absence of detected significant differences under the
+  study design; it does not establish biological equivalence.
+- Lesional PsA skin showed substantially stronger transcriptional remodeling
+  than non-lesional skin.
+- Both diseases converged on IL-17-related inflammation, while PsA showed stronger
+  Th17-related differentiation signals and AS showed leukocyte-chemotaxis signals.
+- Network analyses highlighted recurrent hubs including **PPARG, STAT1, and FOS**
+  and prioritized candidate regulatory factors including **FOXF2, MZF1, IRF2,**
+  and **MAX::MYC**.
+
+These findings should be interpreted in the context of the available tissues,
+cohort sizes, curated gene universe, and four public datasets analyzed.
+
+## Repository structure
 
 ```text
-├── data/                  # Metadata and curated gene lists (e.g., the 433-gene core list)
-├── scripts/               # R scripts organized by analytical steps
-│   ├── 01_deg_analysis.R   # Differential expression analysis pipelines
-│   ├── 02_enrichment.R     # Functional enrichment analysis (GO and KEGG)
-│   └── 03_ppi_network.R   # Network construction and topological analysis
-├── plots/                 # Output figures (Heatmaps, Network Diagrams, Volcano plots)
-└── README.md              # Project documentation
+.
+├── Codes in R/
+│   ├── GSE117769_codigo.R
+│   ├── GSE186063_codigo.R
+│   ├── GSE205748_codigo.R
+│   ├── GSE221786_codigo.R
+│   └── GRN_Hubs_MRs_codigo.R
+├── Tables/
+│   ├── COMMON GENES PsA and AS Supplementary Table 1.csv
+│   ├── Supplementary Table 2 .csv
+│   └── Table of Transcription Factors  Supplementary Table 3.csv
+├── html/                                      # Rendered analysis reports
+├── GSE117769 Images/                          # Dataset-specific outputs
+├── GSE186063 Images/
+├── GSE205748 Images/
+├── GSE221786 Images/
+├── Networks, hubs, and regulators Images/     # Network outputs
+├── Experimental approach used in the dissertation.jpg
+├── LICENSE
+└── README.md
 ```
 
-## 🚀 Getting Started & Requirements
+The dataset-specific scripts can be examined independently. The HTML files are
+rendered records of the analyses and allow the workflow and outputs to be reviewed
+without rerunning computationally intensive steps.
 
-The pipelines in this repository were developed using the R statistical computing environment.
+## Reproducing the analyses
 
-## Prerequisites
+### 1. Clone the repository
 
-To replicate the analyses, make sure you have R (v4.0 or higher) installed along with the following mandatory packages:
-
-R
-```
-# CRAN Packages
-install.packages(c("tidyverse", "BiocManager", "ggplots", "igraph", "visNetwork", "pheatmap"))
-
-# Bioconductor Packages
-BiocManager::install(c("DESeq2", "GEOquery", "clusterProfiler", "org.Hs.eg.db", "AnnotationDbi"))
+```bash
+git clone https://github.com/evomol-lab/spondyloarthropathies.git
+cd spondyloarthropathies
 ```
 
-Execute the script workflows sequentially inside your R console or RStudio environment to reproduce the statistical outputs and network configurations.
+### 2. Prepare the R environment
 
-## 🤝 Institutional Support
+The analyses were developed with **R 4.4.1** and **Bioconductor 3.19**. Core
+dependencies include:
 
-This work was conducted at the Evolutionary Molecular Biology Laboratory (EvoMol-Lab) with computational infrastructure and technical support provided by:
+- data access and processing: `GEOquery`, `data.table`, `tidyverse`, `DESeq2`,
+  `edgeR`, and `limma`;
+- visualization: `ggplot2`, `ComplexHeatmap`, `pheatmap`, `ggraph`, and `umap`;
+- enrichment and annotation: `clusterProfiler`, `ReactomePA`, `org.Hs.eg.db`,
+  `KEGGREST`, `topGO`, and `GOstats`;
+- networks and regulation: `STRINGdb`, `igraph`, `GENIE3`, `JASPAR2020`,
+  `TFBSTools`, and `motifmatchr`.
 
-BioME (Bioinformatics Multidisciplinary Environment) - IMD/UFRN
+Install Bioconductor and the required packages before the first execution:
 
-NPAD (High-Performance Computing Center) - UFRN
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+  install.packages("BiocManager")
+}
 
-## 💰 Funding
+cran_packages <- c(
+  "tidyverse", "data.table", "ggplot2", "pheatmap", "igraph",
+  "ggraph", "umap", "factoextra", "gprofiler2", "RColorBrewer"
+)
 
-This study was financed in part by the Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil (CAPES) - Finance Code 001.
+bioconductor_packages <- c(
+  "GEOquery", "DESeq2", "edgeR", "limma", "AnnotationDbi",
+  "org.Hs.eg.db", "ComplexHeatmap", "clusterProfiler", "enrichplot",
+  "ReactomePA", "STRINGdb", "GENIE3", "JASPAR2020", "TFBSTools",
+  "motifmatchr", "GenomicRanges", "BSgenome.Hsapiens.UCSC.hg38"
+)
 
-## 📜 License
+install.packages(setdiff(cran_packages, rownames(installed.packages())))
+BiocManager::install(
+  setdiff(bioconductor_packages, rownames(installed.packages())),
+  ask = FALSE,
+  update = FALSE
+)
+```
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Additional packages used by individual exploratory or visualization blocks are
+listed at the beginning of each script.
+
+### 3. Run a dataset-specific workflow
+
+Start from the repository root in a clean R session. For example:
+
+```r
+source(file.path("Codes in R", "GSE186063_codigo.R"), echo = TRUE)
+```
+
+The scripts retrieve public count matrices and sample metadata from GEO. The
+first execution therefore requires internet access and may take substantially
+longer because of data and annotation downloads. Some network and enrichment
+steps also query external resources, including STRING and KEGG.
+
+For a rapid audit of the completed analyses, open the corresponding files in
+[`html/`](html/) instead of rerunning the workflows.
+
+## Supplementary tables
+
+| File | Content |
+|---|---|
+| [Supplementary Table 1](Tables/COMMON%20GENES%20PsA%20and%20AS%20Supplementary%20Table%201.csv) | The 433 genes shared by PsA and AS after literature-guided curation |
+| [Supplementary Table 2](Tables/Supplementary%20Table%202%20.csv) | Conserved expression profile across non-lesional skin states relative to lesional PsA skin |
+| [Supplementary Table 3](Tables/Table%20of%20Transcription%20Factors%20%20Supplementary%20Table%203.csv) | Transcription factor–gene associations and dataset occurrence counts |
+
+## Citation
+
+If you use the code, tables, or results, please cite the associated preprint:
+
+> Gonçalves, L. C., Rodrigues-Neto, J. F., Gupta, S., de Souza, G. A., & Lima,
+> J. P. M. S. (2025). *Beyond the Shared Inflammatory Axis: Differentiating
+> Molecular Signatures in Psoriatic Arthritis and Ankylosing Spondylitis through
+> Integrated Omics*. bioRxiv. https://doi.org/10.1101/2025.08.20.671331
+
+```bibtex
+@article{goncalves2025shared_inflammatory_axis,
+  title   = {Beyond the Shared Inflammatory Axis: Differentiating Molecular
+             Signatures in Psoriatic Arthritis and Ankylosing Spondylitis
+             through Integrated Omics},
+  author  = {Gonçalves, Laís de Carvalho and Rodrigues-Neto, João Firmino and
+             Gupta, Shantanu and de Souza, Gustavo Antônio and
+             Lima, João Paulo Matos Santos},
+  journal = {bioRxiv},
+  year    = {2025},
+  doi     = {10.1101/2025.08.20.671331}
+}
+```
+
+The citation will be updated when the peer-reviewed version is published.
+
+## Funding and institutional support
+
+This work was conducted with support from the **Bioinformatics Multidisciplinary
+Environment (BioME)** at the Digital Metropolis Institute, Federal University of
+Rio Grande do Norte (UFRN), and the **High-Performance Computing Center (NPAD)**
+at UFRN.
+
+This study was financed in part by the Coordenação de Aperfeiçoamento de Pessoal
+de Nível Superior — Brasil (CAPES) — Finance Code 001.
 
 ## 📚 References
 
@@ -101,4 +259,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Yu, G., Wang, L. G., Han, Y., & He, Q. Y. (2012). clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology, 16(5), 284-287.
 - Zhang, L., & Li, Z. (2019). RNA-Seq of peripheral blood mononuclear cells from psoriatic arthritis patients and healthy controls (GSE117769). Gene Expression Omnibus. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117769.
   
+## License
+
+The source code is distributed under the [MIT License](LICENSE). The original GEO
+datasets remain subject to the terms specified by their respective depositors and
+repositories.
+
 
