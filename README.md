@@ -234,30 +234,29 @@ de Nível Superior — Brasil (CAPES) — Finance Code 001.
 
 ## 📚 References
 
-- Almende, et al. (2024). visNetwork: Network Visualization using 'vis.js' Library. R package version 2.1.3.
-- Carlson, M. (2024). org.Hs.eg.db: Genome wide annotation for Human. R package version 3.19.0.
-- Carlson, M. (2024). TxDb.Hsapiens.UCSC.hg38.knownGene: Annotation package for TxDb object(s). R package version 3.20.0.
-- Davis, S., & Meltzer, P. S. (2007). GEOquery: a bridge between the Gene Expression Omnibus (GEO) and BioConductor. Bioinformatics, 23(14), 1846-1847.
-- Deng, J., Leijten, E., Nordkamp, M. O., Zheng, G., et al. (2022). Multi-omics integration reveals a core network involved in host defence and hyperkeratinization in psoriasis. Clinical and Translational Medicine, 12(12), e976. https://doi.org/10.1002/ctm2.976.
-- Gene Ontology Consortium. (2021). The Gene Ontology resource: enriching a GO for gene product annotation. Nucleic Acids Research, 49(D1), D325-D334.
-- Johnsson, H., Cole, J., Siebert, S., McInnes, I. B., et al. (2023). Cutaneous lesions in psoriatic arthritis are enriched in chemokine transcriptomic pathways. Arthritis Research & Therapy, 25(1), 73. https://doi.org/10.1186/s13075-023-03086-z.
-- Johnsson, H., Cole, J., McInnes, I. B., Graham, G., et al. (2024). Differences in transcriptional changes in psoriasis and psoriatic arthritis skin with immunoglobulin gene enrichment in psoriatic arthritis. Rheumatology (Oxford), 63(1), 218–225. https://doi.org/10.1093/rheumatology/kead226.
-- Kanehisa, M., Furumichi, M., & Tanabe, M. (2023). KEGG: Kyoto Encyclopedia of Genes and Genomes. Nucleic Acids Research, 51(D1), D587-D594.
-- KEGG. (2024). Kyoto Encyclopedia of Genes and Genomes.
-- Lawrence, M., et al. (2013). GenomicRanges: an R package for manipulating genomic intervals, features and alignments. Bioinformatics, 29(15), 1845-1846.
-- Lee, C., Chan, E. R., Schueller, D., Breitman, M., Haghiac, M., & Magrey, M. (2023). RNA-Seq of PBMCs from patients with axial spondyloarthritis and healthy controls treated with IL-17 (GSE221786).
-- Lou, S., & Brouwer, K. L. (2013). pathview: an R/Bioconductor package for pathway based data integration and visualization. Bioinformatics, 29(1), 181-182.
-- Love, M. I., Huber, W., & Anders, S. (2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biology, 15(12), 550.
-- Gene Expression Omnibus, NCBI. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221786.
-- Pedersen, T. L. (2022). ggraph: An Implementation of Grammar of Graphics for Graphs and Networks. R package version 2.1.0.
-- Robinson, M. D., McCarthy, D. J., & Smyth, G. K. (2010). edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics, 26(1), 139-140.
-- Szklarczyk, D., et al. (2021). The STRING database in 2021: genome-wide protein–protein interaction networks and functional enrichment analyses. Nucleic Acids Research, 49(D1), D789-D796.
-- Tenenbaum, D. (2024). KEGGREST: Client-side REST access to KEGG. R package version 1.44.0.
-- Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York.
-- Wickham, H., et al. (2023). dplyr: A Grammar of Data Manipulation. R package version 1.1.4.
-- Xu, H., et al. (2021). Osteopontin in autoimmune diseases. International Journal of Molecular Sciences, 22(19), 10567.
-- Yu, G., Wang, L. G., Han, Y., & He, Q. Y. (2012). clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology, 16(5), 284-287.
-- Zhang, L., & Li, Z. (2019). RNA-Seq of peripheral blood mononuclear cells from psoriatic arthritis patients and healthy controls (GSE117769). Gene Expression Omnibus. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117769.
+- Almende B.V. and Contributors, & Thieurmel, B. (2025). visNetwork: Network visualization using ‘vis.js’ library (R package version 2.1.4). https://doi.org/10.32614/CRAN.package.visNetwork
+- Carlson, M. (2024). org.Hs.eg.db: Genome wide annotation for Human (R package version 3.19.1). Bioconductor. https://doi.org/10.18129/B9.bioc.org.Hs.eg.db
+- Carlson, M. (2024). TxDb.Hsapiens.UCSC.hg38.knownGene: Annotation package for TxDb object(s) (R package version 3.20.0). Bioconductor.
+- Clemente, N., Raineri, D., Cappellano, G., Boggio, E., Favero, F., Soluri, M. F., Dianzani, C., Comi, C., Dianzani, U., & Chiocchetti, A. (2016). Osteopontin bridging innate and adaptive immunity in autoimmune diseases. Journal of Immunology Research, 2016, 7675437. https://doi.org/10.1155/2016/7675437
+- Davis, S., & Meltzer, P. S. (2007). GEOquery: A bridge between the Gene Expression Omnibus (GEO) and BioConductor. Bioinformatics, 23(14), 1846–1847. https://doi.org/10.1093/bioinformatics/btm254
+- Deng, J., Leijten, E., Nordkamp, M. O., Zheng, G., et al. (2022). Multi-omics integration reveals a core network involved in host defence and hyperkeratinization in psoriasis. Clinical and Translational Medicine, 12(12), e976. https://doi.org/10.1002/ctm2.976
+- Gene Ontology Consortium. (2021). The Gene Ontology resource: Enriching a GOld mine. Nucleic Acids Research, 49(D1), D325–D334. https://doi.org/10.1093/nar/gkaa1113
+- Goldberg, G., Ng, M., Chatfield, S., Murphy, J., D’Silva, D., Pang, E. S., Chen, Y., Alhamdoosh, M., Wilson, N. J., & Wicks, I. (2018). White blood cells from rheumatoid arthritis patients and matched healthy donors (GSE117769) [Data set]. Gene Expression Omnibus. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117769
+- Johnsson, H., Cole, J., McInnes, I. B., Graham, G., & Siebert, S. (2024). Differences in transcriptional changes in psoriasis and psoriatic arthritis skin with immunoglobulin gene enrichment in psoriatic arthritis. Rheumatology (Oxford), 63(1), 218–225. https://doi.org/10.1093/rheumatology/kead195
+- Johnsson, H., Cole, J., Siebert, S., McInnes, I. B., & Graham, G. (2023). Cutaneous lesions in psoriatic arthritis are enriched in chemokine transcriptomic pathways. Arthritis Research & Therapy, 25(1), 73. https://doi.org/10.1186/s13075-023-03034-6
+- Kanehisa, M., Furumichi, M., Sato, Y., Kawashima, M., & Ishiguro-Watanabe, M. (2023). KEGG for taxonomy-based analysis of pathways and genomes. Nucleic Acids Research, 51(D1), D587–D592. https://doi.org/10.1093/nar/gkac963
+- KEGG. (2024). Kyoto Encyclopedia of Genes and Genomes. https://www.kegg.jp
+- Lawrence, M., Huber, W., Pagès, H., Aboyoun, P., Carlson, M., Gentleman, R., Morgan, M. T., & Carey, V. J. (2013). Software for computing and annotating genomic ranges. PLoS Computational Biology, 9(8), e1003118. https://doi.org/10.1371/journal.pcbi.1003118
+- Lee, C., Chan, E. R., Schueller, D., Breitman, M., Haghiac, M., & Magrey, M. (2023). Differentially expressed genes in males and females with ankylosing spondylitis (AS): Distinct effectors in IL-17 producing cells from AS patients (GSE221786) [Data set]. Gene Expression Omnibus. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221786
+- Love, M. I., Huber, W., & Anders, S. (2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biology, 15(12), 550. https://doi.org/10.1186/s13059-014-0550-8
+- Luo, W., & Brouwer, C. (2013). Pathview: An R/Bioconductor package for pathway-based data integration and visualization. Bioinformatics, 29(14), 1830–1831. https://doi.org/10.1093/bioinformatics/btt285
+- Pedersen, T. L. (2025). ggraph: An implementation of grammar of graphics for graphs and networks (R package version 2.2.2). https://doi.org/10.32614/CRAN.package.ggraph
+- Robinson, M. D., McCarthy, D. J., & Smyth, G. K. (2010). edgeR: A Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics, 26(1), 139–140. https://doi.org/10.1093/bioinformatics/btp616
+- Szklarczyk, D., et al. (2021). The STRING database in 2021: Customizable protein–protein networks, and functional characterization of user-uploaded gene/measurement sets. Nucleic Acids Research, 49(D1), D605–D612. https://doi.org/10.1093/nar/gkaa1074
+- Tenenbaum, D., & Bioconductor Package Maintainer. (2024). KEGGREST: Client-side REST access to the Kyoto Encyclopedia of Genes and Genomes (KEGG) (R package version 1.44.0). Bioconductor. https://doi.org/10.18129/B9.bioc.KEGGREST
+- Wickham, H. (2016). ggplot2: Elegant graphics for data analysis. Springer-Verlag New York. https://doi.org/10.1007/978-3-319-24277-4
+- Wickham, H., François, R., Henry, L., Müller, K., & Vaughan, D. (2023). dplyr: A grammar of data manipulation (R package version 1.1.4). https://doi.org/10.32614/CRAN.package.dplyr
+- Yu, G., Wang, L. G., Han, Y., & He, Q. Y. (2012). clusterProfiler: An R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology, 16(5), 284–287. https://doi.org/10.1089/omi.2011.0118
   
 ## License
 
