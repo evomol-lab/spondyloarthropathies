@@ -53,10 +53,10 @@ repository.
 
 | GEO accession | Biological material | Groups and principal comparisons | Script | Rendered analysis |
 |---|---|---|---|---|
-| [GSE117769](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117769) | Peripheral blood | PsA, AS, and healthy controls | [R script](Codes%20in%20R/GSE117769_codigo.R) | [HTML report](html/Analysis-of-DataSet-GSE117769.html) |
+| [GSE117769](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117769) | Peripheral blood leukocytes (white blood cells) | PsA, AS, and healthy controls | [R script](Codes%20in%20R/GSE117769_codigo.R) | [HTML report](html/Analysis-of-DataSet-GSE117769.html) |
 | [GSE186063](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE186063) | Skin | Non-lesional PsA, lesional PsA, and AS skin | [R script](Codes%20in%20R/GSE186063_codigo.R) | [HTML report](html/Analysis%20of%20DataSet%20GSE186063.html) |
 | [GSE205748](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205748) | Skin | Non-lesional PsA, lesional PsA, and controls | [R script](Codes%20in%20R/GSE205748_codigo.R) | [HTML report](html/Analysis-of-DataSet-GSE205748.html) |
-| [GSE221786](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221786) | Peripheral blood mononuclear cells | AS and healthy controls | [R script](Codes%20in%20R/GSE221786_codigo.R) | [HTML report](html/Analysis-of-DataSet-GSE221786.html) |
+| [GSE221786](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE221786) | IL-17–secreting cells enriched from CytoStim-stimulated PBMCs | AS and healthy controls | [R script](Codes%20in%20R/GSE221786_codigo.R) | [HTML report](html/Analysis-of-DataSet-GSE221786.html) |
 
 ## Analysis modules
 
